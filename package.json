@@ -1,0 +1,24 @@
+{
+  "name": "repair-design-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShotAlex/repair-design-project.git"
+  },
+  "author": "AlexShot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShotAlex/repair-design-project/issues"
+  },
+  "homepage": "https://github.com/ShotAlex/repair-design-project#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "browser-sync": "^2.26.7"
+  }
+}
