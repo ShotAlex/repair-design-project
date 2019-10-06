@@ -1,3 +1,489 @@
-body {
-    color: red;
+@import 'normalize';
+
+@mixin standard-button  {
+    padding: 20px 42px;
+    outline: none;
+    background-color: #E3B873;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 13px;
+
 }
+
+@font-face {
+    font-family: "FuturaBookC";
+    src: url("./assets/fonts/Futurabookc.otf");
+}
+
+@font-face {
+    font-family: "Yeseva One";
+    src: url("./assets/fonts/YesevaOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("./assets/fonts/Proxima-Nova.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    &-top {
+        background-color: #131313;
+        padding: 24px 0 22px ;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        &__logo {
+            color: #E3B873;
+            font-size: 14px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        
+        &__menu {
+            // max-width: 880px;
+            &-item {
+                font-size: 14px;
+                color: #fff;
+                text-decoration-line: none;
+
+                &:hover {
+                    color: #E3B873;
+                }
+            }
+        }
+
+        &__call {
+            display: flex;
+            align-items: center;
+
+            &-tel {
+                color: #E3B873;
+                font-size: 14px;
+                border-bottom: 1px solid #E3B873;
+                cursor: pointer;
+            }
+
+            &-btn {
+                padding: 13px 33px;
+                border: 0;
+                text-transform: uppercase;
+                color: #fff;
+                border: none;
+                background-color: #E3B873;
+                border-radius: 2px;
+                cursor: pointer;
+                font-size: 13px;
+            }
+        }
+    }
+    
+    &-content {
+        display: flex;
+        flex-grow: 1;
+
+        &-left {
+            display: flex;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #E3B873;
+            background-color: #131313;
+
+            & p {
+                transform: rotate(90deg);
+                position: relative;
+            }
+            & p::after {
+                content: "";
+                position: absolute;
+                height: 2px;
+                width: 51px;
+                background-color:#E3B873;
+                bottom: 8px;
+                right: -59px;
+            }
+        }
+        &-main {
+            color: #fff;
+            display: flex;
+            padding-top: 194px;
+            padding-left: 60px;
+            padding-bottom: 208px;
+            background: url("../../assets/images/header-bg.png") no-repeat;
+            background-size: cover;
+            position: relative;
+            z-index: 2;
+            flex-grow: 1;
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+
+
+            &-wrapper {
+                z-index: 3;
+                max-width: 550px;
+                
+                &__title h1{
+                    font-size: 40px;
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+
+                    & span {
+                        color: rgb(228, 163, 59);
+                    }
+                }
+                &__subtitle {
+                    font-size: 22px;
+                    margin-bottom: 40px;
+                }
+                &__buttons {
+                    & button {
+                        color: #fff;
+                    }
+                    &-calc {
+                        padding: 20px 42px;
+                        @include standard-button;
+
+                        &:hover {
+                            background-color: rgb(228, 163, 59);
+                        }
+                    }
+                    &-submit {
+                        @include standard-button;
+                        padding: 19px 21px;
+                        border: 1px solid #fff;
+                        background: none;
+                        margin-left: 20px;
+                        transform: .2s;
+
+                        &:hover {
+                            border: 1px solid #E3B873;
+                            color: #E3B873;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    position: relative;
+
+    &__scrolldown {
+        position: absolute;
+        bottom: -49px;
+        z-index: 11;
+        font-size: 14px;
+        width: 248px;
+        height: 98px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: #131313;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration-line: none;
+        
+        & img {
+            height: 28px;
+            margin-left: 12px; 
+        }
+        
+        &:hover {
+        color: #E3B873;
+        cursor: pointer;
+    }
+    }
+}
+// END HEADER 
+
+
+
+
+
+
+// COMPLETED
+.completed-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    background-color: #131313;
+    padding-left: 100px;
+
+
+    &-info {
+        display: flex;
+        padding-top: 174px;
+        flex-direction: column;
+        max-width: 472px;
+
+        &__title {
+            color: #E3B873;
+            font-size: 27px;
+            letter-spacing: -7%;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        &__subtitle {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+        &__description {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            &-inner {
+                width: 50%;
+                margin-bottom: 18px;
+                
+                &-title {
+                    text-transform: uppercase;
+                    color: #E3B873;
+                    line-height: 25px;
+                    font-size: 18px;
+                    margin-bottom: 12px;
+                }
+                &-subtitle {
+                    color: #fff;
+                    font-size: 15px;                
+                }
+            }
+        }
+    }
+
+    &-menu {
+        display: flex;
+        flex-direction: column;
+        padding-top: 108px;
+
+        &__nav {
+            margin-bottom: 46px;
+        }
+
+        &__nav a{
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 14px;
+            line-height: 20px;
+            text-decoration-line: unset;
+            text-transform: uppercase;
+            
+            &:hover {
+                color: #E3B873;
+            }
+        }
+        &__slider {
+            max-width: 845px;
+            height: 484px;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            // background-color: rgb(44, 54, 112);
+
+            &-img-first {
+                background: url("../../assets/images/COMPLETED-slider-01.png") no-repeat;
+                background-size: cover;
+                height: 100%;
+                max-width: 87%;
+            }
+            &-img-second {
+                background: url("../../assets/images/COMPLETED-slider-02.png") no-repeat;
+                background-size: cover;
+                height: 100%;
+                width: 87%;
+            }
+        }
+
+    }
+
+}
+// END COMPLETED
+
+
+//  ONLINE CONTROL
+.online-control-inner {
+    max-width: 818px;
+    margin: 0 auto;
+    padding-bottom: 140px;
+    background-color: rgb(174, 170, 219);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    &__title {
+        color: #fff;
+        font-size: 20px;
+        line-height: 28px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    &__img {
+        margin-bottom: 30px;
+    }
+
+    &__video {
+        margin-bottom: 98px;
+    }
+    
+    &__subtitle {
+        font-size: 20px;
+        color: #363636;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+
+    &__form {
+        & input {}
+        & button {
+            @include standard-button;
+            padding: 20px 46px;
+        }
+        &-checkbox {
+            margin-right: 10px;
+        }
+    }
+}
+// END ONLINE CONTROL
+
+
+// TYPEs OF REPAIR
+.types-of-repair-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 124px;
+
+    &__title {
+        font-size: 20px;
+        line-height: 28px;
+        color: #181818;
+        text-transform: uppercase;
+        margin-bottom: 13px;
+    }
+    &__img {}
+
+    &-from-rub {
+        margin: 0 auto;
+        margin-top: 30px;
+        max-width: 1236px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &__type {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 392px;
+            height: 600px;
+            position: relative;
+
+            & img {
+                height: 421px;
+            }
+        }
+
+        &-block {
+            position: absolute;
+            text-align: left;
+            padding-top: 25px;
+            padding-left: 30px;
+            padding-bottom: 49px;
+            top: 294px;
+            width: 330px;
+            background-color: #fff;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+
+            &__title {
+                color: #363636;
+                font-size: 18px;
+                line-height: 25px;
+            }
+
+            &__subtitle {
+                font-size: 15px;
+                line-height: 25px;
+                color: #959595;
+            }
+
+            &__btn {
+                @include standard-button();
+
+                position: absolute;
+                left: 0px;
+                bottom: -30px;
+                text-transform: uppercase;
+                color: #fff;
+                font-size: 18px;
+                line-height: 25px;
+            }
+        }
+    }
+
+    &-request {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-top: 124px;
+        justify-content: space-between;
+        padding-right: 98px;
+
+        &__circle {
+            max-width: 650px;
+        }
+
+        &-block {
+            &__form {
+                & legend {
+
+                }
+                & input {}
+                & label {}
+            }
+        }
+    }
+}
+// END TYPES OF REPAIR
+
+
+.q1 {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    border-radius: 100%;
+    display: flex;
+    align-items: center; justify-content: center;
+
+    & q2 {
+
+    }
+}
+

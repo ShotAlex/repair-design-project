@@ -1,13 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>IC "Repair Design Project"</title>
+    <link rel="stylesheet" href="./scss/normalize.scss">
     <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
+
 <body>
-    <h1>For first commit :)</h1>
+    <!-- HEADER  (nav-flex-тянучка + tel)-->
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-inner-top">
+                <div class="header-inner-top__logo">IC "Repair Design Project"</div>
+                <nav class="header-inner-top__menu">
+                    <a class="header-inner-top__menu-item" href="#">HOME</a>
+                    <a class="header-inner-top__menu-item" href="#">PROJECTS</a>
+                    <a class="header-inner-top__menu-item" href="#">MEASUREMENT</a>
+                    <a class="header-inner-top__menu-item" href="#">TEAM</a>
+                    <a class="header-inner-top__menu-item" href="#">REVIEWS</a>
+                    <a class="header-inner-top__menu-item" href="#">CONTACTS</a>
+                </nav>
+                <div class="header-inner-top__call">
+                    <div class="header-inner-top__call-tel">+7 (928) 768-32-39</div>
+                    <button class="header-inner-top__call-btn">Request a call</button>
+                </div>
+            </div>
+
+            <div class="header-inner-content">
+                <div class="header-inner-content-left">
+                    <p>Instagram</p>
+                </div>
+                <div class="header-inner-content-main">
+                    <div class="header-inner-content-main-wrapper">
+                        <div class="header-inner-content-main-wrapper__title">
+                            <h1>Turnkey Repair in the city of <span>ROSTOV-ON-DON</span> </h1>
+                        </div>
+                        <div class="header-inner-content-main-wrapper__subtitle">
+                            Get ready-made turnkey repairs on time
+                            with work time saving up to 45 days and 20% from
+                            cost of materials due to the organization of work</div>
+                        <div class="header-inner-content-main-wrapper__buttons">
+                            <button class="header-inner-content-main-wrapper__buttons-calc">CALCULATE THE COST</button>
+                            <button class="header-inner-content-main-wrapper__buttons-submit">SUBMIT YOUR
+                                APPLICATION</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="header-inner__scrolldown" href="#">scrolldown <img src="./assets/images/scrolldown.png"
+                    alt="scrolldown button"></a>
+        </div>
+    </header>
+    <!-- /  HEADER  -->
+
+    <!-- COMPLETED  -->
+    <div class="completed">
+        <div class="completed-inner">
+            <div class="completed-inner-info">
+                <div class="completed-inner-info__title">Completed projects</div>
+                <div class="completed-inner-info__subtitle">Only a small part of the work performed by our company is
+                    presented on the site. For 14 years on in the construction
+                    market we have made happy more than 1000 families</div>
+                <div class="completed-inner-info__description">
+                    <div class="completed-inner-info__description-inner">
+                        <div class="completed-inner-info__description-inner-title">City:</div>
+                        <div class="completed-inner-info__description-inner-subtitle">Rostov-on-Don<br> LCD admiral
+                        </div>
+                    </div>
+                    <div class="completed-inner-info__description-inner">
+                        <div class="completed-inner-info__description-inner-title">apartment area:</div>
+                        <div class="completed-inner-info__description-inner-subtitle">81 m2</div>
+                    </div>
+                    <div class="completed-inner-info__description-inner">
+                        <div class="completed-inner-info__description-inner-title">Repair time:</div>
+                        <div class="completed-inner-info__description-inner-subtitle">3.5 months</div>
+                    </div>
+                    <div class="completed-inner-info__description-inner">
+                        <div class="completed-inner-info__description-inner-title">Repair Cost:</div>
+                        <div class="completed-inner-info__description-inner-subtitle">Upon request</div>
+                    </div>
+                </div>
+
+                <!-- <div class="completed-inner-info__slider">
+                    // 3 dots and arrows left and right
+                </div> -->
+            </div>
+
+            <div class="completed-inner-menu">
+                <div class="completed-inner-menu__nav">
+                    <a href="#">Rostov-on-Don, Admiral</a>
+                    <a href="#">Sochi Thieves</a>
+                    <a href="#">Rostov-on-Don Patriotic</a>
+                </div>
+                <div class="completed-inner-menu__slider">
+                    <div class="completed-inner-menu__slider-img-first"></div>
+                    <div class="completed-inner-menu__slider-img-second"></div>
+                    <div class="completed-inner-menu__slider-btn-right"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /  COMPLETED  -->
+
+    <!-- ONLINE CONTROL  -->
+    <div class="online-control">
+        <div class="online-control-inner">
+            <div class="online-control-inner__title">online control</div>
+            <img src="./assets/images/online-control-img.png" alt="subtitle images - camera"
+                class="online-control-inner__img">
+            <div></div>
+
+            <video src="#" poster="./assets/images/online-control-poster-video.png"
+                class="online-control-inner__video">Video not found
+            </video>
+
+            <div class="online-control-inner__subtitle">
+                At each facility, a camera is installed that broadcasts the progress of work on the clock.
+                <br>At any time, you can go to our website and monitor the progress of work in your
+                <br>apartment. You can watch the live broadcast from one of our facilities!
+                <br>Leave a request below and you will receive a link to the broadcast.
+            </div>
+
+            <form action="#" class="online-control-inner__form">
+                <input type="text" placeholder="What is your name:">
+                <input type="text" placeholder="Your phone number:">
+                <button type="submit" class="online-control-inner__form-button">Submit</button>
+
+                <input type="checkbox" class="online-control-inner__form-checkbox" id="online-control-checkbox"><label
+                    for="online-control-checkbox">I agree to the processing of personal data</label>
+            </form>
+        </div>
+    </div>
+    <!-- / ONLINE CONTROL  -->
+
+
+    <!-- TYPES OF REPAIR  -->
+    <div class="types-of-repair">
+        <div class="types-of-repair-inner">
+            <div class="types-of-repair-inner__title">TYPES OF REPAIR</div>
+            <img src="./assets/images/types-of-repair-subimg.png" alt="types of repair images - hammer"
+                class="types-of-repair-inner__img">
+
+            <div class="types-of-repair-inner-from-rub">
+
+
+                <div class="types-of-repair-inner-from-rub__type">
+                    <img src="./assets/images/style-01.png" alt="style images #1">
+
+                    <div class="types-of-repair-inner-from-rub-block">
+                        <div class="types-of-repair-inner-from-rub-block__title">Redecorating</div>
+                        <div class="types-of-repair-inner-from-rub-block__subtitle">
+                            <ul>
+                                <li>Dismantling of old coatings</li>
+                                <li>Wallpapering</li>
+                                <li>Painting walls and ceilings</li>
+                                <li>Laying flooring</li>
+                                <li>Replacing plumbing</li>
+                                <li>Replacing sockets and switches</li>
+                                <li>Replacing doors</li>
+                            </ul>
+                        </div>
+                        <button class="types-of-repair-inner-from-rub-block__btn">from 900 rub / m2</button>
+                    </div>
+                </div>
+
+
+
+                <div class="types-of-repair-inner-from-rub__type">
+                    <img src="./assets/images/style-02.png" alt="style images #2">
+                    <div class="types-of-repair-inner-from-rub-block">
+                        <div class="types-of-repair-inner-from-rub-block__title">Overhaul</div>
+                        <div class="types-of-repair-inner-from-rub-block__subtitle">
+                            <ul>
+                                <li>Dismantling of old coatings</li>
+                                <li>Wallpapering</li>
+                                <li>Painting walls and ceilings</li>
+                                <li>Laying flooring</li>
+                                <li>Replacing plumbing</li>
+                                <li>Replacing sockets and switches</li>
+                                <li>Replacing doors</li>
+                            </ul>
+                        </div>
+                        <button class="types-of-repair-inner-from-rub-block__btn">from 1800 rub / m2</button>
+                    </div>
+                </div>
+                <div class="types-of-repair-inner-from-rub__type">
+                    <img src="./assets/images/style-03.png" alt="style images #3">
+                    <div class="types-of-repair-inner-from-rub-block">
+                        <div class="types-of-repair-inner-from-rub-block__title">Designer Repair</div>
+                        <div class="types-of-repair-inner-from-rub-block__subtitle">
+                            <ul>
+                                <li>Dismantling of old coatings</li>
+                                <li>Wallpapering</li>
+                                <li>Painting walls and ceilings</li>
+                                <li>Laying flooring</li>
+                                <li>Replacing plumbing</li>
+                                <li>Replacing sockets and switches</li>
+                                <li>Replacing doors</li>
+                            </ul>
+                        </div>
+                        <button class="types-of-repair-inner-from-rub-block__btn">from 4000 rub / m2</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="types-of-repair-inner-request">
+
+                <div class="types-of-repair-inner-request__circle">
+                    <img src="./assets/images/request.png" alt="request image">
+                </div>
+
+                <div class="types-of-repair-inner-request-block">
+                    <form action="#" class="types-of-repair-inner-request-block__form">
+                        <fieldset>
+                            <legend>Leave a request for free departure of the measurer</legend>
+                            <p>
+                                <input type="text" name="name" id="name" value="What is your name:">
+                                <label for="size_1">What is your name:</label>
+                            </p>
+                            <p>
+                                <input type="text" name="phone" id="phone" value="Your phone number:">
+                                <label for="size_2">Your phone number:</label>
+                            </p>
+                            <p>
+                                <input type="text" name="email" id="email" value="Your email">
+                                <label for="size_3">Your email</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="checkbox" id="checkbox">
+                                <label for="size_3">I agree to the processing of personal data</label>
+                            </p>
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- / TYPES OF REPAIR  -->
+
+
+    <div class="q1">
+        <div class="q2">1</div>
+
+    </div>
+
+
+    <!--  Wildest fantasies  -->
+    <!--  design project  -->
+    <!--  6 steps to the goal  -->
+    <!--  our clients  -->
+    <!--  CONTACTS  -->
+    <!--  DOWN FOOTER  -->
 </body>
+
 </html>
