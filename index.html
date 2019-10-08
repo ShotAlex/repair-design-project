@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <!-- HEADER  (nav-flex-тянучка + tel)-->
+    <!-- HEADER -->
     <header class="header">
         <div class="header-inner">
             <div class="header-inner-top">
@@ -33,7 +33,7 @@
 
             <div class="header-inner-content">
                 <div class="header-inner-content-left">
-                    <p>Instagram</p>
+                    <a href="https://www.instagram.com/" target="_blank"><p>Instagram</p></a>
                 </div>
                 <div class="header-inner-content-main">
                     <div class="header-inner-content-main-wrapper">
@@ -52,14 +52,14 @@
                     </div>
                 </div>
             </div>
-            <a class="header-inner__scrolldown" href="#">scrolldown <img src="./assets/images/scrolldown.png"
+            <a class="header-inner__scrolldown" href="#completed">scrolldown <img src="./assets/images/scrolldown.png"
                     alt="scrolldown button"></a>
         </div>
     </header>
     <!-- /  HEADER  -->
 
     <!-- COMPLETED  -->
-    <div class="completed">
+    <div class="completed" id="completed">
         <div class="completed-inner">
             <div class="completed-inner-info">
                 <div class="completed-inner-info__title">Completed projects</div>
@@ -219,25 +219,21 @@
                 <div class="types-of-repair-inner-request-block">
                     <form action="#" class="types-of-repair-inner-request-block__form">
                         <fieldset>
-                            <legend>Leave a request for free departure of the measurer</legend>
-                            <p>
-                                <input type="text" name="name" id="name" value="What is your name:">
-                                <label for="size_1">What is your name:</label>
-                            </p>
-                            <p>
-                                <input type="text" name="phone" id="phone" value="Your phone number:">
-                                <label for="size_2">Your phone number:</label>
-                            </p>
-                            <p>
-                                <input type="text" name="email" id="email" value="Your email">
-                                <label for="size_3">Your email</label>
-                            </p>
-                            <p>
-                                <input type="checkbox" name="checkbox" id="checkbox">
-                                <label for="size_3">I agree to the processing of personal data</label>
-                            </p>
+                            <p>Leave a request for free departure of the measurer</p>
+                            <input type="text" name="name" id="name" value="What is your name:">
+                            <input type="text" name="phone" id="phone" value="Your phone number:">
+                            <input type="text" name="email" id="email" value="Your email">
+                            <p><input type="checkbox" name="checkbox" id="checkbox">
+                                <label for="size_3">I agree to the processing of personal data</label></p>
+                            <button>Call the measurer</button>
                         </fieldset>
                     </form>
+
+                    <div class="types-of-repair-inner-request-block__money-pig">
+                        <img src="./assets/images/money-pig.png" alt="images money pig">
+                        <p>Help save 10 - 20% of the <br>cost of materials</p>
+                    </div>
+
                 </div>
 
             </div>
@@ -246,18 +242,280 @@
     <!-- / TYPES OF REPAIR  -->
 
 
-    <div class="q1">
-        <div class="q2">1</div>
+    <!-- FANTASIES -->
+    <div class="fantasies">
+        <div class="fantasies-inner">
+            <div class="fantasies-inner-menu">
+                <div class="fantasies-inner-menu__title">We realize your
+                    wildest fantasies</div>
+                <ul class="fantasies-inner-menu__list">
+                    <li>American classic</li>
+                    <li>Empire</li>
+                    <li>Classical</li>
+                    <li>Loft</li>
+                    <li>Minimalism</li>
+                    <li>Provence</li>
+                    <li>Romanticism</li>
+                    <li>Scandinavian style</li>
+                    <li>Mediterranean style</li>
+                    <li>High tech</li>
+                    <li>Eclecticism</li>
+                </ul>
+            </div>
 
+            <div class="fantasies-inner-images">
+                <div class="fantasies-inner-images__column1">
+                    <img src="./assets/images/fantasies-01.png" alt="fantasies image">
+                    <img src="./assets/images/fantasies-02.png" alt="fantasies image">
+                </div>
+                <div class="fantasies-inner-images__column2">
+                    <img src="./assets/images/fantasies-03.png" alt="fantasies image">
+                    <img src="./assets/images/fantasies-04.png" alt="fantasies image">
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- / FANTASIES -->
 
 
-    <!--  Wildest fantasies  -->
-    <!--  design project  -->
-    <!--  6 steps to the goal  -->
-    <!--  our clients  -->
+    <!-- DESIGN PROJECTS  -->
+    <div class="projects">
+        <div class="projects-inner">
+
+            <div class="projects-inner__title">design project</div>
+            <img src="./assets/images/design-projects.png" alt="projects image" class="projects-inner__image">
+            <div class="projects-inner__subtitle">Design project not only helps to make the repair of your apartment
+                more 
+                <br>modern,but also significantly reduces the cost of materials and reduces the time of repair work.
+            </div>
+
+            <div class="projects-inner-block">
+
+                <div class="projects-inner-block__type">
+                    <img src="./assets/images/style-01.png" alt="project images #1">
+
+                    <div class="projects-inner-block__type-block">
+                        <div class="projects-inner-block__type-block__title">Mini</div>
+                        <div class="projects-inner-block__type-block__subtitle">
+                            <ul>
+                                <li>Measurement drawing</li>
+                                <li>Redevelopment</li>
+                                <li>Layout of furniture</li>
+                                <li>Plumbing plan. equipment</li>
+                            </ul>
+                        </div>
+                        <button class="projects-inner-block__type-block__btn">Standard</button>
+                    </div>
+                </div>
+
+                <div class="projects-inner-block__type">
+                    <img src="./assets/images/style-02.png" alt="project images #1">
+
+                    <div class="projects-inner-block__type-block">
+                        <div class="projects-inner-block__type-block__title">Full</div>
+                        <div class="projects-inner-block__type-block__subtitle">
+                            <ul>
+                                <li>Measurement drawing</li>
+                                <li>Redevelopment</li>
+                                <li>Layout of furniture</li>
+                                <li>Plan of ceilings</li>
+                                <li>Floor Plan</li>
+                                <li>Electricians plan</li>
+                                <li>Lighting plan</li>
+                            </ul>
+                        </div>
+                        <button class="projects-inner-block__type-block__btn">400 rub / m2</button>
+                    </div>
+                </div>
+
+                <div class="projects-inner-block__type">
+                    <img src="./assets/images/style-03.png" alt="project images #1">
+
+                    <div class="projects-inner-block__type-block">
+                        <div class="projects-inner-block__type-block__title">Redecorating</div>
+                        <div class="projects-inner-block__type-block__subtitle">
+                            <ul>
+                                <li>Measurement drawing</li>
+                                <li>Redevelopment</li>
+                                <li>Layout of furniture</li>
+                                <li>Plan of ceilings</li>
+                                <li>Floor Plan</li>
+                                <li>Electricians plan</li>
+                                <li>Lighting plan</li>
+                                <li>Wall reamers</li>
+                                <li>3D visualization</li>
+                                <li>Bill of materials</li>
+                                <li>Departure for a selection of material</li>
+                                <li>Furniture selection</li>
+                            </ul>
+                        </div>
+                        <button class="projects-inner-block__type-block__btn">900 rub / m2</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- / DESIGN PROJECTS  -->
+
+    <!-- STEPS  -->
+    <!-- / STEPS  -->
+
+    <!-- OUR TEAM  -->
+    <div class="team">
+        <div class="team-inner">
+            <div class="team-inner__title">our team</div>
+            <img src="./assets/images/our-team.png" alt="our team subimage" class="team-inner__images">
+            <div class="team-inner__subtitle">Our team has helped to become happier for more than
+            <br>500 families and we are not going to stop</div>
+
+            <div class="team-inner-block">
+
+                <div class="team-inner-block-person">
+                    <img src="./assets/images/team-min-01.png" alt="ico" class="team-inner-block-person__ico">
+                    <img src="./assets/images/team-person-01.png" alt="person of team - images #1" class="team-inner-block-person__main-img">
+                    <div class="team-inner-block-person__team-block">
+                        <div class="team-inner-block-person__team-block__title">Dmitry tulyakov</div>
+                        <div class="team-inner-block-person__team-block__subtitle">
+                            <ul>
+                                <li>Project manager</li>
+                            </ul>
+                        </div>
+                        <button class="team-inner-block-person__team-block__btn">Work experience 8 years</button>
+                    </div>
+                </div>
+
+                <div class="team-inner-block-person">
+                    <img src="./assets/images/team-min-02.png" alt="ico" class="team-inner-block-person__ico">
+                    <img src="./assets/images/team-person-02.png" alt="person of team - images #1" class="team-inner-block-person__main-img">
+                    <div class="team-inner-block-person__team-block">
+                        <div class="team-inner-block-person__team-block__title">Larisa Kotlyarova</div>
+                        <div class="team-inner-block-person__team-block__subtitle">
+                            <ul>
+                                <li>Designer</li>
+                            </ul>
+                        </div>
+                        <button class="team-inner-block-person__team-block__btn">Work experience 6 years</button>
+                    </div>
+                </div>
+
+                <div class="team-inner-block-person">
+                    <img src="./assets/images/team-min-03.png" alt="ico" class="team-inner-block-person__ico">
+                    <img src="./assets/images/team-person-03.png" alt="person of team - images #1" class="team-inner-block-person__main-img">
+                    <div class="team-inner-block-person__team-block">
+                        <div class="team-inner-block-person__team-block__title">Alexey Efimov</div>
+                        <div class="team-inner-block-person__team-block__subtitle">
+                            <ul>
+                                <li>Foreman</li>
+                            </ul>
+                        </div>
+                        <button class="team-inner-block-person__team-block__btn">Work experience 12 years</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="team-inner__under-block">
+                    <br>Each employee of our company is a qualified full-time specialist 
+                    <br>with work experience of 6 years.
+                    <br>We do not have laborers and guest workers, each employee carries out work corresponding <br>to his specialty.
+            </div>
+        </div>
+
+        <div class="team-inner__white"></div>
+    </div>
+    <!-- / OUR TEAM  -->
+
+
+    <!-- OUR CLIENTS  -->
+    <div class="clients">
+        <div class="clients-inner">
+                <div class="clients-inner__title">our clients</div>
+                <img src="./assets/images/our-clients.png" alt="our team subimage" class="clients-inner__images">
+                <div class="clients-inner__subtitle">80% of our customers recommend us to their
+                        <br>friends and family.</div>
+    
+                <div class="clients-inner-block">
+    
+                    <div class="clients-inner-block-person">
+                        <div class="clients-inner-block-person__title">
+                            <img src="./assets/images/our-clients-01.png" alt="client photo">
+                            Fedosova Maria Konstantinovna
+                        </div>
+                        <div class="clients-inner-block-person__subtitle">I want to thank the guys for their work. We put your shower part in repair. I am very grateful that I referred to the repair as to my own. Great thanks I express the project to georgia for its professionalism and approach. The repair process was turned out in terms, faster than anticipated. Team mobile and professional. Works performed qualitatively without comments. Quality satisfied. Prices democratic. I recommend these masters.
+                        </div>
+                        <button class="clients-inner-block-person__btn">56 м2 | 48 DAYS</button>
+                    </div>
+
+                    <div class="clients-inner-block-person">
+                        <div class="clients-inner-block-person__title">
+                                <img src="./assets/images/our-clients-02.png" alt="client photo">
+                                Afanasyev Sergey Alexandrovich
+                            </div>
+                        <div class="clients-inner-block-person__subtitle">I want to thank the guys for their work. We put your shower part in repair. I am very grateful that I referred to the repair as to my own. Great thanks I express the project to georgia for its professionalism and approach. The repair process was turned out in terms, faster than anticipated. Team mobile and professional. Works performed qualitatively without comments. Quality satisfied. Prices democratic. I recommend these masters.
+                        </div>
+                        <button class="clients-inner-block-person__btn">90 м2 | 128 DAYS</button>
+                    </div>
+
+                    <div class="clients-inner-block-person">
+                        <div class="clients-inner-block-person__title">
+                                <img src="./assets/images/our-clients-03.png" alt="client photo">
+                                Kiriev Egor Leonidovich
+                            </div>
+                        <div class="clients-inner-block-person__subtitle">I want to thank the guys for their work. We put your shower part in repair. I am very grateful that I referred to the repair as to my own. Great thanks I express the project to georgia for its professionalism and approach. The repair process was turned out in terms, faster than anticipated. Team mobile and professional. Works performed qualitatively without comments. Quality satisfied. Prices democratic. I recommend these masters.
+                        </div>
+                        <button class="clients-inner-block-person__btn">40 m2 | 86 DAYS</button>
+                    </div>
+
+                    
+
+                </div>
+
+        </div>
+    </div>
+    <!-- / OUR CLIENTS  -->
+
+
+   
     <!--  CONTACTS  -->
+    <div class="contacts">
+        <div class="contacts-inner">
+            <div class="contacts-inner__form"></div>
+            <div class="contacts-inner__title">Rostov-on-Don, Nansen St., 239 Shopping Center
+                    Decorum Tel +7 (928) 768 32 29</div>
+            <div class="contacts-inner__icons">
+                <a href="#"><img src="./assets/images/contact-ico-01.png" alt="social ico"></a>
+                <a href="#"><img src="./assets/images/contact-ico-02.png" alt="social ico"></a>
+            </div>
+            <div class="contacts-inner__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d150505.92957713074!2d27.45328738924813!3d53.88455846435428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfd35b1e6ad3%3A0xb61b853ddb570d9!2z0JzQuNC90YHQug!5e0!3m2!1sru!2sby!4v1570559379140!5m2!1sru!2sby" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+    <!--  / CONTACTS  -->
+
+
     <!--  DOWN FOOTER  -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-inner-top">
+                <div class="footer-inner-top__logo">IC "Repair Design Project"</div>
+                <nav class="footer-inner-top__menu">
+                    <a class="footer-inner-top__menu-item" href="#">HOME</a>
+                    <a class="footer-inner-top__menu-item" href="#">PROJECTS</a>
+                    <a class="footer-inner-top__menu-item" href="#">MEASUREMENT</a>
+                    <a class="footer-inner-top__menu-item" href="#">TEAM</a>
+                    <a class="footer-inner-top__menu-item" href="#">REVIEWS</a>
+                    <a class="footer-inner-top__menu-item" href="#">CONTACTS</a>
+                </nav>
+                <div class="footer-inner-top__call">
+                    <div class="footer-inner-top__call-tel">+7 (928) 768-32-39</div>
+                    <button class="footer-inner-top__call-btn">Request a call</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--  / DOWN FOOTER  -->
 </body>
 
 </html>

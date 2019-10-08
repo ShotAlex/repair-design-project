@@ -1,6 +1,6 @@
 @import 'normalize';
 
-@mixin standard-button  {
+@mixin standard-button {
     padding: 20px 42px;
     outline: none;
     background-color: #E3B873;
@@ -29,6 +29,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -40,7 +41,7 @@ body {
 
     &-top {
         background-color: #131313;
-        padding: 24px 0 22px ;
+        padding: 24px 0 22px;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -51,8 +52,9 @@ body {
             text-transform: uppercase;
             cursor: pointer;
         }
-        
+
         &__menu {
+
             // max-width: 880px;
             &-item {
                 font-size: 14px;
@@ -89,7 +91,7 @@ body {
             }
         }
     }
-    
+
     &-content {
         display: flex;
         flex-grow: 1;
@@ -103,20 +105,27 @@ body {
             color: #E3B873;
             background-color: #131313;
 
+            & a {
+                color: #E3B873;
+                text-decoration: none;
+            }
+
             & p {
                 transform: rotate(90deg);
                 position: relative;
             }
+
             & p::after {
                 content: "";
                 position: absolute;
                 height: 2px;
                 width: 51px;
-                background-color:#E3B873;
+                background-color: #E3B873;
                 bottom: 8px;
                 right: -59px;
             }
         }
+
         &-main {
             color: #fff;
             display: flex;
@@ -143,8 +152,8 @@ body {
             &-wrapper {
                 z-index: 3;
                 max-width: 550px;
-                
-                &__title h1{
+
+                &__title h1 {
                     font-size: 40px;
                     text-transform: uppercase;
                     margin-bottom: 20px;
@@ -153,14 +162,17 @@ body {
                         color: rgb(228, 163, 59);
                     }
                 }
+
                 &__subtitle {
                     font-size: 22px;
                     margin-bottom: 40px;
                 }
+
                 &__buttons {
                     & button {
                         color: #fff;
                     }
+
                     &-calc {
                         padding: 20px 42px;
                         @include standard-button;
@@ -169,6 +181,7 @@ body {
                             background-color: rgb(228, 163, 59);
                         }
                     }
+
                     &-submit {
                         @include standard-button;
                         padding: 19px 21px;
@@ -186,6 +199,7 @@ body {
             }
         }
     }
+
     position: relative;
 
     &__scrolldown {
@@ -202,23 +216,20 @@ body {
         align-items: center;
         justify-content: center;
         text-decoration-line: none;
-        
+
         & img {
             height: 28px;
-            margin-left: 12px; 
+            margin-left: 12px;
         }
-        
+
         &:hover {
-        color: #E3B873;
-        cursor: pointer;
-    }
+            color: #E3B873;
+            cursor: pointer;
+        }
     }
 }
+
 // END HEADER 
-
-
-
-
 
 
 // COMPLETED
@@ -251,6 +262,7 @@ body {
             color: #fff;
             margin-bottom: 30px;
         }
+
         &__description {
             display: flex;
             flex-direction: row;
@@ -260,7 +272,7 @@ body {
             &-inner {
                 width: 50%;
                 margin-bottom: 18px;
-                
+
                 &-title {
                     text-transform: uppercase;
                     color: #E3B873;
@@ -268,9 +280,10 @@ body {
                     font-size: 18px;
                     margin-bottom: 12px;
                 }
+
                 &-subtitle {
                     color: #fff;
-                    font-size: 15px;                
+                    font-size: 15px;
                 }
             }
         }
@@ -285,17 +298,18 @@ body {
             margin-bottom: 46px;
         }
 
-        &__nav a{
+        &__nav a {
             color: rgba(255, 255, 255, 0.3);
             font-size: 14px;
             line-height: 20px;
             text-decoration-line: unset;
             text-transform: uppercase;
-            
+
             &:hover {
                 color: #E3B873;
             }
         }
+
         &__slider {
             max-width: 845px;
             height: 484px;
@@ -310,6 +324,7 @@ body {
                 height: 100%;
                 max-width: 87%;
             }
+
             &-img-second {
                 background: url("../../assets/images/COMPLETED-slider-02.png") no-repeat;
                 background-size: cover;
@@ -321,6 +336,7 @@ body {
     }
 
 }
+
 // END COMPLETED
 
 
@@ -351,7 +367,7 @@ body {
     &__video {
         margin-bottom: 98px;
     }
-    
+
     &__subtitle {
         font-size: 20px;
         color: #363636;
@@ -361,15 +377,18 @@ body {
 
     &__form {
         & input {}
+
         & button {
             @include standard-button;
             padding: 20px 46px;
         }
+
         &-checkbox {
             margin-right: 10px;
         }
     }
 }
+
 // END ONLINE CONTROL
 
 
@@ -378,7 +397,7 @@ body {
     max-width: 1440px;
     margin: 0 auto;
     text-align: center;
-    padding-bottom: 124px;
+    padding-bottom: 238px;
 
     &__title {
         font-size: 20px;
@@ -387,6 +406,7 @@ body {
         text-transform: uppercase;
         margin-bottom: 13px;
     }
+
     &__img {}
 
     &-from-rub {
@@ -405,6 +425,7 @@ body {
             max-width: 392px;
             height: 600px;
             position: relative;
+            margin-bottom: 50px;
 
             & img {
                 height: 421px;
@@ -445,6 +466,7 @@ body {
                 font-size: 18px;
                 line-height: 25px;
             }
+
         }
     }
 
@@ -457,33 +479,589 @@ body {
         padding-right: 98px;
 
         &__circle {
-            max-width: 650px;
+            max-width: 750px;
+
+            & img {
+                width: 100%;
+            }
         }
 
         &-block {
-            &__form {
-                & legend {
+            &__form fieldset {
+                display: flex;
+                flex-direction:  column;
+                padding: 28px 48px;
+                height: 510px;
+                width: 510px;;
+                color: #fff;
+                background-color: #131313;
+                position: relative;
+
+
+                & p {
+                    font-size: 20px;
+                    line-height: 25px;
+                }
+
+                & input {
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    // margin-top: 60px;
 
                 }
-                & input {}
-                & label {}
+
+                & label {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+
+                & button {
+                    @include standard-button();
+                    justify-self: right;                    
+                    text-transform: uppercase;
+                    color: #fff;
+
+                    position: absolute;
+                    bottom: 30px;
+                    right: 50px;
+                }
             }
+
+            &__money-pig {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 30px;
+
+                & img {
+                    width: 72px;
+                }
+
+                & p {
+                    font-size: 20px;
+                    line-height: 25px;
+                    color: #E3B873;
+                    margin: 0;
+                    text-align: left;
+                }
+            }
+
         }
     }
 }
 // END TYPES OF REPAIR
 
 
-.q1 {
-    width: 400px;
-    height: 400px;
-    background-color: red;
-    border-radius: 100%;
+// FANTASIES
+.fantasies {
+        &-inner {
+        max-width: 1440px;
+        margin: 0 auto;
+
+        background: url('../../assets/images/fantasies-bg.png') no-repeat 50% 50%;        background-size: cover;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 870px;
+        z-index: 2;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+            &-menu {
+                z-index: 3;
+                padding: 136px 75px 98px 98px;
+
+                &__title {
+                    text-transform: uppercase;
+                    color: #E3B873;
+                    font-size: 27px;
+                    line-height: 37px;
+                    width: 300px;
+                    margin-bottom: 47px;
+                }
+
+                &__list {
+                    color: #fff;
+                    font-size: 20px;
+                    line-height: 34px;
+                    list-style: none;
+
+                    & li:hover {
+                        color: #E3B873;
+                    }
+                }
+            }
+
+            &-images {
+                position: absolute;
+                top: -130px;
+                right: 98px;
+                z-index: 5;
+                display: flex;
+                flex-direction: row;
+                
+                &__column1,
+                &__column2 {
+                    width: 354px;
+                    margin: 20px;
+
+                    & img {
+                        margin-bottom: 40px;
+                    }
+
+                }
+
+                &__column1 {
+                    padding-top: 60px;
+                }
+            }
+        }
+}
+// END FANTASIES
+
+
+// DESIGN PROJECTS
+.projects-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 660px;
+    padding-top: 156px;
     display: flex;
-    align-items: center; justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 
-    & q2 {
+    &__title {
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 15px;
+    }
 
+    &__image {
+        width: 28px;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        line-height: 27px;
+        color: #363636;
+        margin-top: 15px;
+        margin-bottom: 48px;
+        text-align: center;
+    }
+
+    &-block {
+        margin: 0 auto;
+        margin-top: 30px;
+        max-width: 1236px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &__type {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 392px;
+            height: 600px;
+            position: relative;
+            margin-bottom: 50px;
+
+            & img {
+                height: 421px;
+            }
+
+            &-block {
+                position: absolute;
+                text-align: left;
+                padding-top: 25px;
+                padding-left: 30px;
+                padding-bottom: 49px;
+                top: 294px;
+                width: 330px;
+                background-color: #fff;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+
+                &__title {
+                    color: #363636;
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+
+                &__subtitle {
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: #959595;
+                }
+
+                &__btn {
+                    @include standard-button();
+
+                    position: absolute;
+                    left: 0px;
+                    bottom: -30px;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+
+            }
+        }        
     }
 }
+// END DESIGN PROJECTS
 
+
+// STEPS
+
+
+
+
+// END STEPS
+
+
+// TEAM
+.team-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #131313;
+    text-align: center;
+    padding-top: 598px; // ------------------ 98px
+    height: 1000px;
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 15px;
+        color: #fff;
+    }
+
+    &__image {
+        width: 28px;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        line-height: 27px;
+        color: #fff;
+        margin-top: 15px;
+        margin-bottom: 48px;
+        text-align: center;
+    }
+
+    &-block {
+        margin: 0 auto;
+        max-width: 1236px;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        &-person {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 392px;
+            height: 380px;
+            position: relative;
+            margin-bottom: 50px;
+            padding-top: 30px;
+            padding-left: 30px;
+
+            &__ico {
+                height: 70px;
+                width: 70px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            &__main-img {
+                height: 356px;
+                width: 272px;
+            }
+
+            &__team-block {
+                position: absolute;
+                text-align: center;
+                padding-top: 25px;
+                top: 294px;
+                height: 136px;
+                width: 236px;
+                background-color: #fff;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+
+                &__title {
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: #181818;
+                }
+
+                &__subtitle li {
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: #959595;
+                    list-style-type: none;
+                }
+
+                &__subtitle ul {
+                    padding-left: 0;
+                }
+
+                &__btn {
+                    @include standard-button();
+
+                    width: 100%;
+                    height: 44px;
+                    padding: 0;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-size: 13px;
+                    line-height: 20px;
+                }
+
+            }
+            
+        }
+    }
+
+    &__under-block {
+        margin-top: 70px;
+        font-size: 20px;
+        line-height: 34px;
+        color: #363636;
+    }
+
+    &__white {
+        height: 500px;
+        background-color: #fff;
+    }
+}
+// END OUR TEAM
+
+// OUR CLIENTS
+.clients-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 60px;
+    height: 1100px;
+    background-color: rgb(250, 250, 250);
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 15px;
+        color: #181818;
+    }
+    
+    &__image {
+        width: 28px;
+    }
+    
+    &__subtitle {
+        font-size: 20px;
+        line-height: 27px;
+        color: #363636;
+        margin-top: 15px;
+        margin-bottom: 48px;
+        text-align: center;
+    }
+    
+    
+    &-block {
+        margin: 0 auto;
+        margin-top: 30px;
+        max-width: 1236px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        &-person {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #fff;
+            margin-bottom: 40px;
+            width: 376px;
+            height: 420px;
+            position: relative;
+            
+            &__title {
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                text-align: left;
+                font-size: 18px;
+                line-height: 25px;
+                color: #181818;
+                padding-right: 80px;
+                & img {
+                    margin-right: 20px;
+                }
+            }
+            
+            &__subtitle {
+                text-align: left;
+                padding: 20px;
+                font-size: 15px;
+                
+            }
+
+            &__btn {
+                @include standard-button();
+                
+                position: absolute;
+                width: 50%;
+                height: 44px;
+                padding: 0;
+                bottom: -22px;
+                left: 0;
+                text-transform: uppercase;
+                color: #fff;
+                font-size: 13px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+// END OUR CLIENTS
+
+// CONTACTS
+.contacts-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    // text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("../../assets/images/contacts-bg.png");
+    padding-top: 275px;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%);
+        z-index: 1;
+    }
+
+    &__form {
+        z-index: 3;
+    
+    }
+
+    &__title {
+        z-index: 3;
+        font-size: 20px;
+        line-height: 28px;
+        text-transform: uppercase;
+        max-width: 590px;
+        text-align: center;
+        color: #E3B873;
+        margin-bottom: 30px;
+    }
+
+    &__icons  {
+        z-index: 3;
+
+        & img{
+            margin: 8px;
+        }
+    }
+    
+
+    &__map {
+        z-index: 3;
+        margin: 40px;
+        width: 928px;
+        height: 460px;
+    }
+}
+// END CONTACTS
+
+// FOOTER
+.footer-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    &-top {
+        background-color: #131313;
+        padding: 24px 0 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        &__logo {
+            color: #E3B873;
+            font-size: 14px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        &__menu {
+
+            // max-width: 880px;
+            &-item {
+                font-size: 14px;
+                color: #fff;
+                text-decoration-line: none;
+
+                &:hover {
+                    color: #E3B873;
+                }
+            }
+        }
+
+        &__call {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+            &-tel {
+                color: #E3B873;
+                font-size: 14px;
+                border-bottom: 1px solid #E3B873;
+                cursor: pointer;     
+                padding-right: 30px;           
+            }
+
+            &-btn {
+                padding: 13px 33px;
+                border: 0;
+                text-transform: uppercase;
+                color: #fff;
+                border: none;
+                background-color: #E3B873;
+                border-radius: 2px;
+                cursor: pointer;
+                font-size: 13px;
+            }
+        }
+    }
+}
+// END FOOTER
