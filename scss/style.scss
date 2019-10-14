@@ -8,8 +8,32 @@
     border-radius: 2px;
     cursor: pointer;
     font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
 
 }
+
+@mixin left-subimage-bar {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 1px;
+    background-color: #E3B873;
+    top: 45%;
+    left: -40px;
+}
+
+@mixin right-subimage-bar {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 1px;
+    background-color: #E3B873;
+    top: 45%;
+    right: -40px;
+}
+
+
 
 @font-face {
     font-family: "FuturaBookC";
@@ -54,6 +78,9 @@ body {
         }
 
         &__menu {
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
 
             // max-width: 880px;
             &-item {
@@ -76,6 +103,7 @@ body {
                 font-size: 14px;
                 border-bottom: 1px solid #E3B873;
                 cursor: pointer;
+                text-decoration: none;
             }
 
             &-btn {
@@ -88,6 +116,7 @@ body {
                 border-radius: 2px;
                 cursor: pointer;
                 font-size: 13px;
+                margin-left: 30px;
             }
         }
     }
@@ -236,11 +265,14 @@ body {
 .completed-inner {
     max-width: 1440px;
     margin: 0 auto;
-    height: 800px;
+    // height: 800px;
+    padding-bottom: 400px; //----- <<<<<<<<<< height
     display: flex;
     flex-direction: row;
     background-color: #131313;
     padding-left: 100px;
+    display: flex;
+    justify-content: space-between;
 
 
     &-info {
@@ -255,12 +287,26 @@ body {
             letter-spacing: -7%;
             text-transform: uppercase;
             margin-bottom: 30px;
+            position: relative;
+            width: 200px;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 80px;
+                height: 3px;
+                background-color: #E3B873;
+                bottom: 10px;
+                right: -50px;
+            }
         }
 
         &__subtitle {
             font-size: 18px;
             color: #fff;
+            line-height: 29px;
             margin-bottom: 30px;
+            padding-right: 40px;
         }
 
         &__description {
@@ -296,6 +342,9 @@ body {
 
         &__nav {
             margin-bottom: 46px;
+            width: 624px;
+            display: flex;
+            justify-content: space-between;
         }
 
         &__nav a {
@@ -304,9 +353,21 @@ body {
             line-height: 20px;
             text-decoration-line: unset;
             text-transform: uppercase;
+            position: relative;
 
             &:hover {
                 color: #E3B873;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background-color: #E3B873;
+                    bottom: -2px;
+                    left: 0;
+                }
+
             }
         }
 
@@ -318,18 +379,36 @@ body {
             overflow: hidden;
             // background-color: rgb(44, 54, 112);
 
+            display: flex;
+            position: relative;
+            width: 840px;
+
             &-img-first {
-                background: url("../../assets/images/COMPLETED-slider-01.png") no-repeat;
+                background: url("../../assets/images/COMPLETED-slider-01.png");
+
                 background-size: cover;
+                width: 740px;
                 height: 100%;
-                max-width: 87%;
             }
 
             &-img-second {
-                background: url("../../assets/images/COMPLETED-slider-02.png") no-repeat;
+                background: url("../../assets/images/COMPLETED-slider-02.png");
                 background-size: cover;
+                width: 740px;
                 height: 100%;
-                width: 87%;
+            }
+
+            &-btn-right {
+                background: url("../../assets/images/slider-btn-right.png") 50% 50%;
+                background-repeat: no-repeat;
+                width: 54px;
+                height: 54px;
+                position: absolute;
+                right: 40px;
+                top: 45%;
+                background-color: #E3B873;
+                border-radius: 50%;
+                cursor: pointer;
             }
         }
 
@@ -341,11 +420,21 @@ body {
 
 
 //  ONLINE CONTROL
+.online-control {
+    position: relative;
+    height: 800px;
+}
+
 .online-control-inner {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 230px;
+
+
     max-width: 818px;
     margin: 0 auto;
     padding-bottom: 140px;
-    background-color: rgb(174, 170, 219);
 
     display: flex;
     flex-direction: column;
@@ -361,11 +450,24 @@ body {
     }
 
     &__img {
-        margin-bottom: 30px;
+        width: 28px;
+        position: relative;
+        margin: 0 auto;
+        
+
+        &::before {
+            @include left-subimage-bar();
+        }
+
+        &::after {
+            @include right-subimage-bar();
+        }
     }
 
-    &__video {
+    & iframe {
+        margin-top: 40px;
         margin-bottom: 98px;
+        height: 434px;
     }
 
     &__subtitle {
@@ -373,21 +475,82 @@ body {
         color: #363636;
         margin-bottom: 100px;
         text-align: center;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            background-color: #E3B873;
+            border-radius: 30px;
+            width: 55px;
+            height: 2px;
+            left: 45%;
+            top: -34px;
+
+        }
     }
-
+//  -------------------------------------------------
     &__form {
-        & input {}
 
-        & button {
-            @include standard-button;
-            padding: 20px 46px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        &-input {
+            &-inner {
+                
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: right;
+
+                &-data {
+                    display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+                }
+            }
+        }
+
+        input {
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            outline: none;
+            font-size: 18px;
+            line-height: 24px;
+            color: #363636;
+            padding: 8px;
+            border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+            margin-bottom: 46px;
+
+
+            &::placeholder {
+                font-size: 18px;
+                line-height: 24px;
+                color: #363636;
+            }
         }
 
         &-checkbox {
-            margin-right: 10px;
+            text-align: center;
+            font-size: 18px;
+            line-height: 24px;
+            color: #363636;
+
+            span {
+                margin-left: 10px;
+            }
         }
+
+        button {
+            @include standard-button();
+            padding: 20px 54px;
+        }
+        // ------------------------------
     }
 }
+
 
 // END ONLINE CONTROL
 
@@ -407,7 +570,20 @@ body {
         margin-bottom: 13px;
     }
 
-    &__img {}
+    &__img {
+        width: 28px;
+        position: relative;
+        margin: 0 auto;
+        
+
+        &::before {
+            @include left-subimage-bar();
+        }
+
+        &::after {
+            @include right-subimage-bar();
+        }
+    }
 
     &-from-rub {
         margin: 0 auto;
@@ -461,8 +637,6 @@ body {
                 position: absolute;
                 left: 0px;
                 bottom: -30px;
-                text-transform: uppercase;
-                color: #fff;
                 font-size: 18px;
                 line-height: 25px;
             }
@@ -489,10 +663,11 @@ body {
         &-block {
             &__form fieldset {
                 display: flex;
-                flex-direction:  column;
+                flex-direction: column;
                 padding: 28px 48px;
                 height: 510px;
-                width: 510px;;
+                width: 510px;
+                ;
                 color: #fff;
                 background-color: #131313;
                 position: relative;
@@ -501,24 +676,48 @@ body {
                 & p {
                     font-size: 20px;
                     line-height: 25px;
+                    width: 250px;
+                    margin: 0 auto;
                 }
 
                 & input {
                     width: 100%;
+                    margin-top: 46px;
                     border: none;
                     outline: none;
-                    // margin-top: 60px;
+                    background-color: rgba(0, 0, 0, 0);
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: #fff;
+                    padding: 8px;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+                    &::placeholder {
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: #fff;
+                    }
 
                 }
 
                 & label {
                     font-size: 16px;
                     line-height: 22px;
+                    display: flex;
+                    padding-top: 14px;
+
+                    & input {
+                        margin-top: 0;
+                        width: 18px;
+                        height: 18px;
+                        margin-right: 18px;
+                        background-color: #E3B873;
+                    }
                 }
 
                 & button {
                     @include standard-button();
-                    justify-self: right;                    
+                    justify-self: right;
                     text-transform: uppercase;
                     color: #fff;
 
@@ -550,16 +749,18 @@ body {
         }
     }
 }
+
 // END TYPES OF REPAIR
 
 
 // FANTASIES
 .fantasies {
-        &-inner {
+    &-inner {
         max-width: 1440px;
         margin: 0 auto;
 
-        background: url('../../assets/images/fantasies-bg.png') no-repeat 50% 50%;        background-size: cover;
+        background: url('../../assets/images/fantasies-bg.png') no-repeat 50% 50%;
+        background-size: cover;
         position: relative;
         display: flex;
         flex-direction: row;
@@ -577,56 +778,57 @@ body {
             background-color: rgba(0, 0, 0, 0.7);
         }
 
-            &-menu {
-                z-index: 3;
-                padding: 136px 75px 98px 98px;
+        &-menu {
+            z-index: 3;
+            padding: 136px 75px 98px 98px;
 
-                &__title {
-                    text-transform: uppercase;
-                    color: #E3B873;
-                    font-size: 27px;
-                    line-height: 37px;
-                    width: 300px;
-                    margin-bottom: 47px;
-                }
-
-                &__list {
-                    color: #fff;
-                    font-size: 20px;
-                    line-height: 34px;
-                    list-style: none;
-
-                    & li:hover {
-                        color: #E3B873;
-                    }
-                }
+            &__title {
+                text-transform: uppercase;
+                color: #E3B873;
+                font-size: 27px;
+                line-height: 37px;
+                width: 300px;
+                margin-bottom: 47px;
             }
 
-            &-images {
-                position: absolute;
-                top: -130px;
-                right: 98px;
-                z-index: 5;
-                display: flex;
-                flex-direction: row;
-                
-                &__column1,
-                &__column2 {
-                    width: 354px;
-                    margin: 20px;
+            &__list {
+                color: #fff;
+                font-size: 20px;
+                line-height: 34px;
+                list-style: none;
 
-                    & img {
-                        margin-bottom: 40px;
-                    }
-
-                }
-
-                &__column1 {
-                    padding-top: 60px;
+                & li:hover {
+                    color: #E3B873;
                 }
             }
         }
+
+        &-images {
+            position: absolute;
+            top: -130px;
+            right: 98px;
+            z-index: 5;
+            display: flex;
+            flex-direction: row;
+
+            &__column1,
+            &__column2 {
+                width: 354px;
+                margin: 20px;
+
+                & img {
+                    margin-bottom: 40px;
+                }
+
+            }
+
+            &__column1 {
+                padding-top: 60px;
+            }
+        }
+    }
 }
+
 // END FANTASIES
 
 
@@ -648,8 +850,19 @@ body {
         margin-bottom: 15px;
     }
 
-    &__image {
+
+
+    &__img {
         width: 28px;
+        position: relative;
+
+        &::before {
+            @include left-subimage-bar();
+        }
+
+        &::after {
+            @include right-subimage-bar();
+        }
     }
 
     &__subtitle {
@@ -713,16 +926,15 @@ body {
                     position: absolute;
                     left: 0px;
                     bottom: -30px;
-                    text-transform: uppercase;
-                    color: #fff;
                     font-size: 18px;
                     line-height: 25px;
                 }
 
             }
-        }        
+        }
     }
 }
+
 // END DESIGN PROJECTS
 
 
@@ -740,8 +952,9 @@ body {
     margin: 0 auto;
     background-color: #131313;
     text-align: center;
-    padding-top: 598px; // ------------------ 98px
+    padding-top: 598px;
     height: 1000px;
+    
 
     &__title {
         text-transform: uppercase;
@@ -751,8 +964,19 @@ body {
         color: #fff;
     }
 
-    &__image {
+    &__img {
         width: 28px;
+        position: relative;
+        margin: 0 auto;
+        
+
+        &::before {
+            @include left-subimage-bar();
+        }
+
+        &::after {
+            @include right-subimage-bar();
+        }
     }
 
     &__subtitle {
@@ -830,14 +1054,12 @@ body {
                     width: 100%;
                     height: 44px;
                     padding: 0;
-                    text-transform: uppercase;
-                    color: #fff;
                     font-size: 13px;
                     line-height: 20px;
                 }
 
             }
-            
+
         }
     }
 
@@ -853,6 +1075,7 @@ body {
         background-color: #fff;
     }
 }
+
 // END OUR TEAM
 
 // OUR CLIENTS
@@ -871,11 +1094,22 @@ body {
         margin-bottom: 15px;
         color: #181818;
     }
-    
-    &__image {
+
+    &__imG {
         width: 28px;
+        position: relative;
+        margin: 0 auto;
+        
+
+        &::before {
+            @include left-subimage-bar();
+        }
+
+        &::after {
+            @include right-subimage-bar();
+        }
     }
-    
+
     &__subtitle {
         font-size: 20px;
         line-height: 27px;
@@ -884,8 +1118,8 @@ body {
         margin-bottom: 48px;
         text-align: center;
     }
-    
-    
+
+
     &-block {
         margin: 0 auto;
         margin-top: 30px;
@@ -894,7 +1128,7 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        
+
         &-person {
             display: flex;
             flex-wrap: wrap;
@@ -904,7 +1138,7 @@ body {
             width: 376px;
             height: 420px;
             position: relative;
-            
+
             &__title {
                 padding: 20px;
                 display: flex;
@@ -914,35 +1148,35 @@ body {
                 line-height: 25px;
                 color: #181818;
                 padding-right: 80px;
+
                 & img {
                     margin-right: 20px;
                 }
             }
-            
+
             &__subtitle {
                 text-align: left;
                 padding: 20px;
                 font-size: 15px;
-                
+
             }
 
             &__btn {
                 @include standard-button();
-                
+
                 position: absolute;
                 width: 50%;
                 height: 44px;
                 padding: 0;
                 bottom: -22px;
                 left: 0;
-                text-transform: uppercase;
-                color: #fff;
                 font-size: 13px;
                 line-height: 20px;
             }
         }
     }
 }
+
 // END OUR CLIENTS
 
 // CONTACTS
@@ -969,9 +1203,75 @@ body {
         z-index: 1;
     }
 
+
+
+
+
+
+
+
+
     &__form {
+        position: absolute;
+        top: -230px;
         z-index: 3;
-    
+        width: 884px;
+        height: 446px;
+        background-color: #181818;
+        padding: 10px 182px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        // 
+        &-title {
+            font-size: 20px;
+            line-height: 28px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        input {
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            outline: none;
+            font-size: 18px;
+            line-height: 24px;
+            color: #FFFFFF;
+            padding: 8px;
+            border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+            margin-bottom: 46px;
+
+            &::placeholder {
+                font-size: 18px;
+                line-height: 24px;
+                color: #FFFFFF;
+            }
+        }
+
+        &-input {
+            
+        }
+
+        &-checkbox {
+            text-align: center;
+            color: #fff;
+
+            span {
+                margin-left: 10px;
+            }
+        }
+
+        &-btn {
+            text-align: center;
+        }
+        
+        button {
+            @include standard-button();
+            padding: 20px 54px;
+        }
+        // 
     }
 
     &__title {
@@ -985,14 +1285,14 @@ body {
         margin-bottom: 30px;
     }
 
-    &__icons  {
+    &__icons {
         z-index: 3;
 
-        & img{
+        & img {
             margin: 8px;
         }
     }
-    
+
 
     &__map {
         z-index: 3;
@@ -1001,6 +1301,7 @@ body {
         height: 460px;
     }
 }
+
 // END CONTACTS
 
 // FOOTER
@@ -1023,8 +1324,10 @@ body {
         }
 
         &__menu {
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
 
-            // max-width: 880px;
             &-item {
                 font-size: 14px;
                 color: #fff;
@@ -1039,15 +1342,12 @@ body {
         &__call {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-
 
             &-tel {
                 color: #E3B873;
                 font-size: 14px;
                 border-bottom: 1px solid #E3B873;
-                cursor: pointer;     
-                padding-right: 30px;           
+                cursor: pointer;
             }
 
             &-btn {
@@ -1060,8 +1360,10 @@ body {
                 border-radius: 2px;
                 cursor: pointer;
                 font-size: 13px;
+                margin-left: 30px;
             }
         }
     }
 }
+
 // END FOOTER

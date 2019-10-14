@@ -11,22 +11,30 @@
 
 </head>
 
+<!-- 
+    value="as" onfocus="this.value=''"
+    for input text
+
+    to make style of checkbox
+
+    to make bg for Online-control
+ -->
 <body>
     <!-- HEADER -->
-    <header class="header">
+    <header class="header" id="home">
         <div class="header-inner">
             <div class="header-inner-top">
                 <div class="header-inner-top__logo">IC "Repair Design Project"</div>
                 <nav class="header-inner-top__menu">
-                    <a class="header-inner-top__menu-item" href="#">HOME</a>
-                    <a class="header-inner-top__menu-item" href="#">PROJECTS</a>
-                    <a class="header-inner-top__menu-item" href="#">MEASUREMENT</a>
-                    <a class="header-inner-top__menu-item" href="#">TEAM</a>
-                    <a class="header-inner-top__menu-item" href="#">REVIEWS</a>
-                    <a class="header-inner-top__menu-item" href="#">CONTACTS</a>
+                    <a class="header-inner-top__menu-item" href="#home">HOME</a>
+                    <a class="header-inner-top__menu-item" href="#projects">PROJECTS</a>
+                    <a class="header-inner-top__menu-item" href="#measurment">MEASUREMENT</a>
+                    <a class="header-inner-top__menu-item" href="#team">TEAM</a>
+                    <a class="header-inner-top__menu-item" href="#reviews">REVIEWS</a>
+                    <a class="header-inner-top__menu-item" href="#contacts">CONTACTS</a>
                 </nav>
                 <div class="header-inner-top__call">
-                    <div class="header-inner-top__call-tel">+7 (928) 768-32-39</div>
+                    <a class="header-inner-top__call-tel" href="tel:+79287683239">+7 (928) 768-32-39</a>
                     <button class="header-inner-top__call-btn">Request a call</button>
                 </div>
             </div>
@@ -59,7 +67,7 @@
     <!-- /  HEADER  -->
 
     <!-- COMPLETED  -->
-    <div class="completed" id="completed">
+    <main class="completed" id="completed">
         <div class="completed-inner">
             <div class="completed-inner-info">
                 <div class="completed-inner-info__title">Completed projects</div>
@@ -105,21 +113,20 @@
             </div>
 
         </div>
-    </div>
+    </main>
     <!-- /  COMPLETED  -->
 
     <!-- ONLINE CONTROL  -->
     <div class="online-control">
         <div class="online-control-inner">
             <div class="online-control-inner__title">online control</div>
-            <img src="./assets/images/online-control-img.png" alt="subtitle images - camera"
-                class="online-control-inner__img">
-            <div></div>
-
-            <video src="#" poster="./assets/images/online-control-poster-video.png"
-                class="online-control-inner__video">Video not found
-            </video>
-
+            <div class="online-control-inner__img">
+                <img src="./assets/images/online-control-img.png" alt="subtitle images - camera"
+                class="online-control-inner__image">
+            </div>
+            
+            <iframe width="100%"  src="https://www.youtube.com/embed/DQfiBquc-L4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
             <div class="online-control-inner__subtitle">
                 At each facility, a camera is installed that broadcasts the progress of work on the clock.
                 <br>At any time, you can go to our website and monitor the progress of work in your
@@ -128,12 +135,28 @@
             </div>
 
             <form action="#" class="online-control-inner__form">
-                <input type="text" placeholder="What is your name:">
-                <input type="text" placeholder="Your phone number:">
-                <button type="submit" class="online-control-inner__form-button">Submit</button>
+                <div class="online-control-inner__form-input">
+                    <div class="online-control-inner__form-input-inner">
+                        <div class="online-control-inner__form-input-inner-data">
+<input type="text" name="name" id="name" value="What is your name:" value="as" onfocus="this.value=''">
+                        </div>
+                        <div class="online-control-inner__form-input-inner-data">
+<input type="text" name="phone" id="phone" value="Your phone number:" value="as" onfocus="this.value=''">
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    <div class="online-control-inner__form-checkbox">
+                        <label for="checkbox"><input type="checkbox" name="checkbox" id="checkbox"><span>I agree to the processing of personal data</span> </label>
+                    </div>
+                </div>
+                
 
-                <input type="checkbox" class="online-control-inner__form-checkbox" id="online-control-checkbox"><label
-                    for="online-control-checkbox">I agree to the processing of personal data</label>
+                <div class="online-control-inner__form-btn">
+                    <button type="submit">Submit</button>
+                </div>
+
             </form>
         </div>
     </div>
@@ -144,11 +167,12 @@
     <div class="types-of-repair">
         <div class="types-of-repair-inner">
             <div class="types-of-repair-inner__title">TYPES OF REPAIR</div>
-            <img src="./assets/images/types-of-repair-subimg.png" alt="types of repair images - hammer"
-                class="types-of-repair-inner__img">
+            <div class="types-of-repair-inner__img">
+                 <img src="./assets/images/types-of-repair-subimg.png" alt="types of repair images - hammer" class="types-of-repair-inner__image">
+            </div>
+           
 
             <div class="types-of-repair-inner-from-rub">
-
 
                 <div class="types-of-repair-inner-from-rub__type">
                     <img src="./assets/images/style-01.png" alt="style images #1">
@@ -220,12 +244,11 @@
                     <form action="#" class="types-of-repair-inner-request-block__form">
                         <fieldset>
                             <p>Leave a request for free departure of the measurer</p>
-                            <input type="text" name="name" id="name" value="What is your name:">
-                            <input type="text" name="phone" id="phone" value="Your phone number:">
-                            <input type="text" name="email" id="email" value="Your email">
-                            <p><input type="checkbox" name="checkbox" id="checkbox">
-                                <label for="size_3">I agree to the processing of personal data</label></p>
-                            <button>Call the measurer</button>
+                            <input type="text" name="name" id="name" value="What is your name:" value="as" onfocus="this.value=''">
+                            <input type="text" name="phone" id="phone" value="Your phone number:" value="as" onfocus="this.value=''">
+                            <input type="text" name="email" id="email" value="Your email" value="as" onfocus="this.value=''">
+                            <label for="checkbox"><input type="checkbox" name="checkbox" id="checkbox">I agree to the processing of personal data</label>
+                            <button type="submit">Call the measurer</button>
                         </fieldset>
                     </form>
 
@@ -243,7 +266,7 @@
 
 
     <!-- FANTASIES -->
-    <div class="fantasies">
+    <div class="fantasies" id="measurment">
         <div class="fantasies-inner">
             <div class="fantasies-inner-menu">
                 <div class="fantasies-inner-menu__title">We realize your
@@ -282,8 +305,9 @@
     <div class="projects">
         <div class="projects-inner">
 
-            <div class="projects-inner__title">design project</div>
-            <img src="./assets/images/design-projects.png" alt="projects image" class="projects-inner__image">
+            <div class="projects-inner__title" id="projects">design project</div>
+            <div class="projects-inner__img"> <img src="./assets/images/design-projects.png" alt="projects image" class="projects-inner__image"></div>
+           
             <div class="projects-inner__subtitle">Design project not only helps to make the repair of your apartment
                 more 
                 <br>modern,but also significantly reduces the cost of materials and reduces the time of repair work.
@@ -364,8 +388,11 @@
     <!-- OUR TEAM  -->
     <div class="team">
         <div class="team-inner">
-            <div class="team-inner__title">our team</div>
-            <img src="./assets/images/our-team.png" alt="our team subimage" class="team-inner__images">
+            <div class="team-inner__title" id="team">our team</div>
+
+            <div class="team-inner__img">
+                <img src="./assets/images/our-team.png" alt="our team subimage" class="team-inner__images">
+            </div>
             <div class="team-inner__subtitle">Our team has helped to become happier for more than
             <br>500 families and we are not going to stop</div>
 
@@ -428,10 +455,13 @@
 
 
     <!-- OUR CLIENTS  -->
-    <div class="clients">
+    <div class="clients" id="reviews">
         <div class="clients-inner">
                 <div class="clients-inner__title">our clients</div>
-                <img src="./assets/images/our-clients.png" alt="our team subimage" class="clients-inner__images">
+                <div class="clients-inner__imG">
+                    <img src="./assets/images/our-clients.png" alt="our team subimage" class="clients-inner__images">
+                </div>
+                
                 <div class="clients-inner__subtitle">80% of our customers recommend us to their
                         <br>friends and family.</div>
     
@@ -478,14 +508,39 @@
 
    
     <!--  CONTACTS  -->
-    <div class="contacts">
+    <div class="contacts" id="contacts">
         <div class="contacts-inner">
-            <div class="contacts-inner__form"></div>
+
+            <div class="contacts-inner__form">
+                <form action="№">
+
+                        <div class="contacts-inner__form-title">
+                            <p>have any questions?</p> 
+                        </div>
+                        <div class="contacts-inner__form-input">
+                            <input type="text" name="name" id="name" value="What is your name:" value="as" onfocus="this.value=''">
+                            <input type="text" name="phone" id="phone" value="Your phone number:" value="as" onfocus="this.value=''">
+                        </div>
+                        <div class="contacts-inner__form-input">
+                            <input type="text" name="email" id="email" value="I want to know:" value="as" onfocus="this.value=''">
+                        </div>
+                        <div class="contacts-inner__form-checkbox">
+                            <label for="checkbox"><input type="checkbox" name="checkbox" id="checkbox"><span>I agree to the processing of personal data</span> </label>
+                        </div>
+                        <div class="contacts-inner__form-btn">
+                            <button type="submit">Submit</button>
+                        </div>
+
+                </form>
+            </div>
+
+
+
             <div class="contacts-inner__title">Rostov-on-Don, Nansen St., 239 Shopping Center
                     Decorum Tel +7 (928) 768 32 29</div>
             <div class="contacts-inner__icons">
-                <a href="#"><img src="./assets/images/contact-ico-01.png" alt="social ico"></a>
-                <a href="#"><img src="./assets/images/contact-ico-02.png" alt="social ico"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="./assets/images/contact-ico-01.png" alt="social ico"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="./assets/images/contact-ico-02.png" alt="social ico"></a>
             </div>
             <div class="contacts-inner__map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d150505.92957713074!2d27.45328738924813!3d53.88455846435428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfd35b1e6ad3%3A0xb61b853ddb570d9!2z0JzQuNC90YHQug!5e0!3m2!1sru!2sby!4v1570559379140!5m2!1sru!2sby" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
@@ -501,15 +556,15 @@
             <div class="footer-inner-top">
                 <div class="footer-inner-top__logo">IC "Repair Design Project"</div>
                 <nav class="footer-inner-top__menu">
-                    <a class="footer-inner-top__menu-item" href="#">HOME</a>
-                    <a class="footer-inner-top__menu-item" href="#">PROJECTS</a>
-                    <a class="footer-inner-top__menu-item" href="#">MEASUREMENT</a>
-                    <a class="footer-inner-top__menu-item" href="#">TEAM</a>
-                    <a class="footer-inner-top__menu-item" href="#">REVIEWS</a>
-                    <a class="footer-inner-top__menu-item" href="#">CONTACTS</a>
+                    <a class="header-inner-top__menu-item" href="#home">HOME</a>
+                    <a class="header-inner-top__menu-item" href="#projects">PROJECTS</a>
+                    <a class="header-inner-top__menu-item" href="#measurment">MEASUREMENT</a>
+                    <a class="header-inner-top__menu-item" href="#team">TEAM</a>
+                    <a class="header-inner-top__menu-item" href="#reviews">REVIEWS</a>
+                    <a class="header-inner-top__menu-item" href="#contacts">CONTACTS</a>
                 </nav>
                 <div class="footer-inner-top__call">
-                    <div class="footer-inner-top__call-tel">+7 (928) 768-32-39</div>
+                    <a class="footer-inner-top__call-tel" href="tel:+79287683239">+7 (928) 768-32-39</a>
                     <button class="footer-inner-top__call-btn">Request a call</button>
                 </div>
             </div>
