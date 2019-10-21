@@ -17,7 +17,7 @@
 
     to make style of checkbox
 
-    to make bg for Online-control
+    media 375
  -->
 <body>
     <!-- HEADER -->
@@ -106,9 +106,13 @@
                     <a href="#">Rostov-on-Don Patriotic</a>
                 </div>
                 <div class="completed-inner-menu__slider">
-                    <div class="completed-inner-menu__slider-img-first"></div>
-                    <div class="completed-inner-menu__slider-img-second"></div>
-                    <div class="completed-inner-menu__slider-btn-right"></div>
+                    <div class="completed-inner-menu__slider-wrapper">
+                        <div class="completed-inner-menu__slider-wrapper-img-first"></div>
+                    <div class="completed-inner-menu__slider-wrapper-img-second"></div>
+                    <div class="completed-inner-menu__slider-wrapper-btn-right"></div>
+                    </div>
+
+                    
                 </div>
             </div>
 
@@ -138,21 +142,17 @@
                 <div class="online-control-inner__form-input">
                     <div class="online-control-inner__form-input-inner">
                         <div class="online-control-inner__form-input-inner-data">
-<input type="text" name="name" id="name" value="What is your name:" value="as" onfocus="this.value=''">
+                            <input type="text" name="name" id="name" value="What is your name:" value="as" onfocus="this.value=''">
                         </div>
                         <div class="online-control-inner__form-input-inner-data">
-<input type="text" name="phone" id="phone" value="Your phone number:" value="as" onfocus="this.value=''">
+                            <input type="text" name="phone" id="phone" value="Your phone number:" value="as" onfocus="this.value=''">
                         </div>
-                        
-                        
                     </div>
-                    
                     <div class="online-control-inner__form-checkbox">
                         <label for="checkbox"><input type="checkbox" name="checkbox" id="checkbox"><span>I agree to the processing of personal data</span> </label>
                     </div>
                 </div>
                 
-
                 <div class="online-control-inner__form-btn">
                     <button type="submit">Submit</button>
                 </div>
@@ -289,7 +289,7 @@
             <div class="fantasies-inner-images">
                 <div class="fantasies-inner-images__column1">
                     <img src="./assets/images/fantasies-01.png" alt="fantasies image">
-                    <img src="./assets/images/fantasies-02.png" alt="fantasies image">
+                    <img src="./assets/images/fantasies-02.png" alt="fantasies image" class="fantasies-inner-images__column1-2">
                 </div>
                 <div class="fantasies-inner-images__column2">
                     <img src="./assets/images/fantasies-03.png" alt="fantasies image">
